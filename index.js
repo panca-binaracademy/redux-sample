@@ -1,23 +1,23 @@
-import todoStore from './store/todo.js'
+import store from './store/store.js'
+
+console.log(store.getState())
 
 //console.log('todoStore:', todoStore)
-console.log('state awal:', todoStore.getState())
+// todoStore.subscribe(() => {
+//     console.log('transaksi selesai')
+// })
 
-todoStore.subscribe(() => {
-    console.log('transaksi selesai')
-})
+// console.log('state awal:', todoStore.getState())
 
-todoStore.dispatch({
-    type: 'addTodo',
-    payload: {
-        description: 'Mengerjakan tugas'
-    }
-})
-todoStore.dispatch({
-    type: 'addTodo',
-    payload: {
-        description: 'Beli gula'
-    }
-})
+// todoStore.dispatch( addTodoActionCreator('Mengerjakan tugas') )
+// todoStore.dispatch( addTodoActionCreator('Beli gula') )
 
-console.log('state akhir:', todoStore.getState())
+// console.log('state setelah add:', todoStore.getState())
+
+// todoStore.dispatch( toggleTodoActionCreator(2) )
+
+// console.log('state setelah toggle:', todoStore.getState())
+
+// todoStore.dispatch( removeTodoActionCreator(1) )
+
+// console.log('state setelah remove:', todoStore.getState())
